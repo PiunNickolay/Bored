@@ -69,7 +69,7 @@ fun MainBored(viewModel: MainActivityViewModel) {
                 )
             )
     ) {
-        val bored = viewModel.state...
+        val bored by viewModel.state.collectAsState()
         Column(
             modifier = Modifier.fillMaxWidth(),
         ) {
