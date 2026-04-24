@@ -1,5 +1,6 @@
 package ru.nickolay.bored.data.local
 
+import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
@@ -8,6 +9,7 @@ import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
 import ru.nickolay.bored.domain.model.Activity
 
+@Dao
 interface BoredDao {
         @Insert(onConflict = OnConflictStrategy.REPLACE)
         suspend fun insertBoredActivity(bored: BoredEntity)
